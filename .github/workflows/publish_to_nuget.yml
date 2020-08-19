@@ -1,0 +1,17 @@
+name: publish to nuget
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish:
+    name: list on nuget
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: publish Tfc.CAP.AliyunAMQP
+        uses: brandedoutcast/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: src/Tfc.CAP.AliyunAMQP/Tfc.CAP.AliyunAMQP.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
