@@ -1,7 +1,3 @@
-# Tfc.CAP.AliyunAMQP
-
-阿里云 AMQP 身份认证扩展
-
 # CAP 使用阿里云 AMQP 服务
 
 ## 安装依赖
